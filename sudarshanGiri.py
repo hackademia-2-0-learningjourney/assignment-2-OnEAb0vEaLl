@@ -3,42 +3,42 @@ task 3
 using the txt file to save the input.'''
 
 
-# def read():
-#  a=int(input('would you like to sign in or sign up(1=in/2=up):'))
-#  if a==1 :
-#      username=input("enter username:")
-#      password=input("enter password:")
-#      mobileNumber=input("enter mobile number:")
-#      with open('database1.txt','w') as f:
-#         f.write(username+' '+password+' '+mobileNumber)
-#  elif a==2 :
-#         username=input("enter username:")
-#         password=input("enter password:")
-#         mobileNumber=input("enter mobile number:") 
-#         with open('database1.txt','r') as f:
-#             readNOte=f.readlines()
+def read():
+ a=int(input('would you like to sign in or sign up(1=in/2=up):'))
+ if a==1 :
+     username=input("enter username:")
+     password=input("enter password:")
+     mobileNumber=input("enter mobile number:")
+     with open('database1.txt','w') as f:
+        f.write(username+' '+password+' '+mobileNumber)
+ elif a==2 :
+        username=input("enter username:")
+        password=input("enter password:")
+        mobileNumber=input("enter mobile number:") 
+        with open('database1.txt','r') as f:
+            readNOte=f.readlines()
         
-#         found =False
-#         for note in readNOte:
-#          if note.strip() == (username+' '+password+' '+mobileNumber):
-#                print("welcome inside the server")
-#                found =True
-#                break
-#         else:
-#             print("the detail is incorrect")
+        found =False
+        for note in readNOte:
+         if note.strip() == (username+' '+password+' '+mobileNumber):
+               print("welcome inside the server")
+               found =True
+               break
+        else:
+            print("the detail is incorrect")
     
-#  else:
-#     print("invalid input")
+ else:
+    print("invalid input")
 
-# while True: 
-#     b = input("Would you like to enter the server (yes/no): ").lower()
-#     if b == "yes":
-#         read()
-#     elif b == "no":
-#         print("Thank you for visiting")
-#         break
-#     else:
-#         print("Invalid input. Please enter 'yes' or 'no'.")
+while True: 
+    b = input("Would you like to enter the server (yes/no): ").lower()
+    if b == "yes":
+        read()
+    elif b == "no":
+        print("Thank you for visiting")
+        break
+    else:
+        print("Invalid input. Please enter 'yes' or 'no'.")
 
 
 '''
